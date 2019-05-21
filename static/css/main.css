@@ -13,7 +13,7 @@ input::-ms-clear { display: none; }
 #navBar .active{background:#fafafa;border:1px solid #252c34;width:10px;height:10px}
 #navBar li{cursor:pointer;margin-bottom:10px;transition:all .7s ease;border-radius:50%;line-height:16px;text-align:center;width:10px;height:10px;background:#ccc}
 .top-fixed-nav{width:100%;background:rgba(37,44,52,.97);height:50px;padding-left:22px;position:fixed;top:0;left:0;z-index:10000}
-.logo{float:left;width:159px;height:16px;display:inline-block;background:url(/static/images/logo.png) no-repeat left;background-size:auto 16px;margin-right:10px;margin-top:17px}
+.logo{float:left;width:159px;height:16px;display:inline-block;background:url(static/images/logo.png) no-repeat left;background-size:auto 16px;margin-right:10px;margin-top:17px}
 .logo_change{float:left;margin-top:18px}
 .logo_change a,.logo_change span{display:block;float:left;background:#3b4c56;color:#fff;box-sizing:border-box;width:56px;height:24px;line-height:22px;text-align:center}
 .logo_change span.active{background:#419af6}

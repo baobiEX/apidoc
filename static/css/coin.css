@@ -1,0 +1,34 @@
+.im_coin{background:url(/static/images/im_coin.png?v=19) no-repeat top center;width: 100px;height: 100px;display: block;}
+.coin_bch{background-position:0 0}
+.coin_eth{background-position:0 -100px}
+.coin_etc{background-position:0 -200px}
+.coin_ltc{background-position:0 -300px}
+.coin_btc{background-position:0 -400px}
+.coin_doge{background-position:0 -500px}
+.coin_ybct{background-position:0 -600px}
+.coin_bt1{background-position:0 -700px}
+.coin_bt2{background-position:0 -800px}
+.coin_bcd{background-position:0 -900px}
+.coin_usc{background-position:0 -1000px}
+.coin_lbtc{background-position:0 -1100px}
+.coin_etf{background-position:0 -1200px}
+.coin_bcx{background-position:0 -1300px}
+.coin_btp{background-position:0 -1400px}
+.coin_eos{background-position:0 -1500px}
+.coin_btw{background-position:0 -1600px}
+.coin_sbtc{background-position:0 -1700px}
+.coin_act{background-position:0 -1800px}
+.coin_fbtc{background-position:0 -1900px}
+.coin_qbtc{background-position:0 -2000px}
+.coin_hlc{background-position:0 -2100px}
+.coin_ubtc{background-position:0 -2200px}
+.coin_xrp{background-position:0 -2300px}
+.coin_btf{background-position:0 -2400px}
+.coin_aidoc{background-position:0 -2500px}
+.coin_abt{background-position:0 -2600px}
+.coin_safe{background-position:0 -2700px}
+.coin_lxt{background-position:0 -2800px}
+.coin_iotx{background-position:0 -2900px}
+
+
+.price_today_ul li.new:before{content: '';width: 35px;height: 35px;display: block;position: absolute;left: -1px;top: -1px;background:url(/static/images/coin_new.png) no-repeat 0 0 / 35px auto;}

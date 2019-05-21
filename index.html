@@ -1,0 +1,485 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>API申请 - 安全、可靠、快捷、贴心的数字资产交易平台 – Baobi.com</title>
+    <meta name="keywords" content="比特币，比特币资讯，比特币新闻，数字货币，莱特币，以太坊，比特币行情，币币交易">
+    <meta name="description" content="Baobi.com为您提供最新的数字货币新闻资讯，解读比特币、莱特币、以太坊等数字货币行业信息">
+    <link rel="stylesheet" href="static/css/global.css?v=1537157205" type="text/css">
+    <link rel="stylesheet" href="static/css/coin.css?v=1537157205" type="text/css">
+    <link rel="stylesheet" href="static/css/main.css?v=1537157205" type="text/css">
+    <script type="text/javascript" src="static/js/jquery/jquery.1.11.0.min.js"></script>
+    <script>
+        var USD_btc = 1,USD_eth = 1,USD_usc = 1,CNY_btc = 1,CNY_eth = 1,CNY_usc = 1,pricePage = 1;
+        var coinorder = {"data":{"btc":{"eth":{"coin":"eth","is_new":0,"lang":{"zh_CN":"\u4ee5\u592a\u574a","en_US":"Ethereum"}},"ltc":{"coin":"ltc","is_new":0,"lang":{"zh_CN":"\u83b1\u7279\u5e01","en_US":"Litcoin"}},"eos":{"coin":"eos","is_new":0,"lang":{"zh_CN":"EOS","en_US":"EOS"}},"doge":{"coin":"doge","is_new":0,"lang":{"zh_CN":"\u72d7\u72d7\u5e01","en_US":"Dogecoin"}},"xrp":{"coin":"xrp","is_new":0,"lang":{"zh_CN":"\u745e\u6ce2\u5e01","en_US":"Ripple"}},"etc":{"coin":"etc","is_new":0,"lang":{"zh_CN":"\u4ee5\u592a\u7ecf\u5178","en_US":"Ethereum Classic"}},"bch":{"coin":"bch","is_new":0,"lang":{"zh_CN":"\u6bd4\u7279\u73b0\u91d1","en_US":"Bitcoin Cash"}},"bsv":{"coin":"bsv","is_new":0,"lang":{"zh_CN":"Bitcoin SV","en_US":"Bitcoin SV"}},"act":{"coin":"act","is_new":0,"lang":{"zh_CN":"Achain","en_US":"Achain"}},"bcd":{"coin":"bcd","is_new":0,"lang":{"zh_CN":"\u6bd4\u7279\u94bb\u77f3","en_US":"Bitcoin Diamond"}},"safe":{"coin":"safe","is_new":0,"lang":{"zh_CN":"\u5b89\u7f513","en_US":"SAFE"}},"hlc":{"coin":"hlc","is_new":0,"lang":{"zh_CN":"Halal Chain","en_US":"Halal Chain"}},"aidoc":{"coin":"aidoc","is_new":0,"lang":{"zh_CN":"\u5929\u533b","en_US":"AI Doctor"}},"abt":{"coin":"abt","is_new":0,"lang":{"zh_CN":"ArcBlock","en_US":"ArcBlock"}},"ybct":{"coin":"ybct","is_new":0,"lang":{"zh_CN":"\u5143\u5b9d\u5e01","en_US":"YBcoin"}},"lbtc":{"coin":"lbtc","is_new":0,"lang":{"zh_CN":"\u95ea\u7535\u6bd4\u7279\u5e01","en_US":"Lightning Bitcoin"}},"lxt":{"coin":"lxt","is_new":1,"lang":{"zh_CN":"LITEX","en_US":"LITEX"}},"btf":{"coin":"btf","is_new":0,"lang":{"zh_CN":"\u6bd4\u7279\u4fe1\u4ef0","en_US":"Bitcoin Faith"}},"qbtc":{"coin":"qbtc","is_new":0,"lang":{"zh_CN":"\u91cf\u5b50\u6bd4\u7279\u5e01","en_US":"Quantum Bitcoin"}},"ubtc":{"coin":"ubtc","is_new":0,"lang":{"zh_CN":"\u6bd4\u7279\u8054\u50a8","en_US":"United Bitcoin"}},"fbtc":{"coin":"fbtc","is_new":0,"lang":{"zh_CN":"\u5feb\u901f\u6bd4\u7279\u5e01","en_US":"Fast Bitcoin"}},"sbtc":{"coin":"sbtc","is_new":0,"lang":{"zh_CN":"\u8d85\u7ea7\u6bd4\u7279\u5e01","en_US":"Super Bitcoin"}},"btp":{"coin":"btp","is_new":0,"lang":{"zh_CN":"\u6bd4\u7279\u652f\u4ed8","en_US":"Bitcoin Pay"}},"bcx":{"coin":"bcx","is_new":0,"lang":{"zh_CN":"\u6bd4\u7279\u65e0\u9650","en_US":"Bitcoin X"}},"etf":{"coin":"etf","is_new":0,"lang":{"zh_CN":"\u4ee5\u592a\u96fe","en_US":"Ethereum Fog"}},"bt1":{"coin":"bt1","is_new":0,"lang":{"zh_CN":"BT1","en_US":"BT1"}},"bt2":{"coin":"bt2","is_new":0,"lang":{"zh_CN":"BT2","en_US":"BT2"}},"btw":{"coin":"btw","is_new":0,"lang":{"zh_CN":"\u6bd4\u7279\u4e16\u754c","en_US":"Bitcoin World"}}},"eth":{"eos":{"coin":"eos","is_new":0,"lang":{"zh_CN":"EOS","en_US":"EOS"}},"xrp":{"coin":"xrp","is_new":0,"lang":{"zh_CN":"\u745e\u6ce2\u5e01","en_US":"Ripple"}},"etc":{"coin":"etc","is_new":0,"lang":{"zh_CN":"\u4ee5\u592a\u7ecf\u5178","en_US":"Ethereum Classic"}},"ltc":{"coin":"ltc","is_new":0,"lang":{"zh_CN":"\u83b1\u7279\u5e01","en_US":"Litcoin"}},"iotx":{"coin":"iotx","is_new":1,"lang":{"zh_CN":"IoTeX","en_US":"IoTeX"}},"hlc":{"coin":"hlc","is_new":0,"lang":{"zh_CN":"Halal Chain","en_US":"Halal Chain"}},"ade":{"coin":"ade","is_new":1,"lang":{"zh_CN":"DMCHAIN","en_US":"DMCHAIN"}},"ela":{"coin":"ela","is_new":1,"lang":{"zh_CN":"\u4ea6\u6765\u4e91","en_US":"ela"}},"lxt":{"coin":"lxt","is_new":1,"lang":{"zh_CN":"LITEX","en_US":"LITEX"}}},"usdt":{"btc":{"coin":"btc","is_new":0,"lang":{"zh_CN":"\u6bd4\u7279\u5e01","en_US":"Bitcoin"}},"eth":{"coin":"eth","is_new":0,"lang":{"zh_CN":"\u4ee5\u592a\u574a","en_US":"Ethereum"}},"eos":{"coin":"eos","is_new":0,"lang":{"zh_CN":"EOS","en_US":"EOS"}},"ltc":{"coin":"ltc","is_new":0,"lang":{"zh_CN":"\u83b1\u7279\u5e01","en_US":"Litcoin"}},"doge":{"coin":"doge","is_new":0,"lang":{"zh_CN":"\u72d7\u72d7\u5e01","en_US":"Dogecoin"}}},"busd":{"usdt":{"coin":"usdt","is_new":0,"lang":{"zh_CN":"USDT","en_US":"USDT"}},"btc":{"coin":"btc","is_new":0,"lang":{"zh_CN":"\u6bd4\u7279\u5e01","en_US":"Bitcoin"}}}}};
+        var COIN = {};
+        for(var i in coinorder.data.btc){
+            COIN[coinorder.data.btc[i].coin] = coinorder.data.btc[i].lang;
+            COIN[coinorder.data.btc[i].coin]['coin'] = coinorder.data.btc[i].coin;
+        }
+        COIN['btc'] = {"zh_CN":"比特币","en_US":"Bitcoin","coin":"btc"}
+        COIN['usc'] = {"zh_CN":"usc","en_US":"usc","coin":"usc"}
+    </script>
+    <script type="text/javascript" src="static/js/lang/zh_CN/lang.js?v=1537157205"></script>
+    <script type="text/javascript" src="static/js/coinuni.js?v=1537157205"></script>
+    <script type="text/javascript" src="static/js/os.js"></script>
+    <script charset="utf-8" src="chrome-extension://jgphnjokjhjlcnnajmfjlacjnjkhleah/js/btype.js"></script>
+    <script type="text/javascript" charset="utf-8" src="chrome-extension://jgphnjokjhjlcnnajmfjlacjnjkhleah/js/chrome.js"></script>
+</head>
+<body>
+<div class="top-fixed-nav">
+    <a href="/" class="logo"></a>
+    <ul class="left nav">
+        <li><a class="" href="./">API</a></li>
+    </ul>
+    <div id="lang" class="right">
+        <span class="lang"></span>
+        <div class="lanague">
+
+        </div>
+    </div>
+    <div class="top-login right">
+        <a href="https://www.baobi.com/account/login" class="login">登录</a>
+        <a href="https://www.baobi.com/account/register" class="login">注册</a>
+    </div>
+</div><div class="body">
+    <div class="left">
+        <a href="https://support.baobi.com/hc/zh-cn/sections/360002475092">官方公告</a>
+        <a href="https://support.baobi.com/hc/zh-cn/sections/360002475112">新闻资讯</a>
+        <a href="./" class="cur">API说明</a>
+    </div><!--头部结束-->
+    <!--右侧内容-->
+    <div class="right gonggao">
+        <p class="t">API文档</p>
+        <div class="gonggao-con api_con">
+            <p class="api_t1"><a href="#partone" class="blue">一、API使用说明</a></p>
+            <p class="api_t2"><a href="#one">1、请求过程说明</a></p>
+            <p class="api_t2"><a href="#two">2、安全认证</a></p>
+            <p class="api_t2"><a href="#three">3、接口</a></p>
+            <p class="api_t3"><a href="#three-one">3.1获取当前最新行情 - Ticker</a></p>
+            <p class="api_t3"><a href="#three-two">3.2市场深度 - Depth</a></p>
+            <p class="api_t3"><a href="#three-four">3.3账户信息 - Balance</a></p>
+            <p class="api_t3"><a href="#three-six">3.4挂单查询 - Trust_list</a></p>
+            <p class="api_t3"><a href="#three-seven">3.5查询订单信息 - Trust_view</a></p>
+            <p class="api_t3"><a href="#three-eight">3.6取消订单 - Trust_cancel</a></p>
+            <p class="api_t3"><a href="#three-nine">3.7下单 - Trust_add</a></p>
+            <p class="api_t2"><a href="#four">4.错误代码对照表</a></p>
+            <p class="api_t1"><a href="#parttwo" class="blue">二、API实例代码</a></p>
+            <div class="apijj_con">
+                <p class="gonggao-con-t"><span class="dw" id="partone"></span><b>一、API使用说明</b></p>
+                <p style="font-weight: bold;" class="api_p1"><span class="dw" id="one"></span>1、请求过程说明</p>
+                <p class="api_p2">1.1 构造请求数据，用户数据按照Baobi提供的接口规则，通过程序生成签名和要传输给Baobi的数据集合；</p>
+                <p class="api_p2">1.2 发送请求数据，把构造完成的数据集合通过POST/GET提交的方式传递给Baobi；</p>
+                <p class="api_p2">1.3 Baobi对请求数据进行处理，服务器在接收到请求后，会首先进行安全校验，验证通过后便会处理该次发送过来的请求；</p>
+                <p class="api_p2">1.4 返回响应结果数据，Baobi把响应结果以JSON的格式反馈给用户，具体的响应格式，错误代码参见接口部分；</p>
+                <p class="api_p2">1.5 对获取的返回结果数据进行处理；</p>
+                <p class="api_p2">1.6 Domain : <strong>https://api.baobi.com</strong></p>
+                <p style="font-weight: bold;" class="api_p1"><span class="dw" id="two"></span>2、安全认证</p>
+                <p class="api_p2">所有的private API都需要经过认证</p>
+                <p class="api_p2">Api的申请可以到财务中心 -&gt; API，申请得到私钥和公钥，私钥Baobi将不做储存，一旦丢失将无法找回</p>
+                <p class="api_p2">注意:请勿向任何人泄露这两个参数，这像您的密码一样重要</p>
+                <p style="font-weight: bold;" class="api_p1">3、签名机制</p>
+                <p class="api_p2">每次请求private api 都需要验证签名，发送的参数示例：</p>
+                <p class="api_p2">$param = array(</p>
+                <p class="api_p3">amount =&gt; 1,</p>
+                <p class="api_p3">price =&gt; 10000,</p>
+                <p class="api_p3">type =&gt; 'buy',</p>
+                <p class="api_p3">nonce =&gt; 141377098123</p>
+                <p class="api_p3">key =&gt; 5zi7w-4mnes-swmc4-egg9b-f2iqw-396z4-g541b</p>
+                <p class="api_p3">signature =&gt; 459c69d25c496765191582d9611028b9974830e9dfafd762854669809290ed82</p>
+                <p class="api_p2">);</p>
+                <p class="api_p2">nonce 可以理解为一个递增的整数：http://zh.wikipedia.org/wiki/Nonce</p>
+                <p class="api_p2">key 是申请到的公钥</p>
+                <p class="api_p2">signature是签名，是将amount price type nonce key等参数通过'&amp;'字符连接起来通过md5(私钥)为key进行sha256算法加密得到的值.</p>
+                <p style="font-weight: bold;" class="api_p1"><span class="dw" id="three"></span>4、接口</p>
+                <div>
+                    <span class="dw" id="three-one"></span>
+                    <p class="api_p2"><b>Ticker（牌价）</b></p>
+                    <p class="api_p3">Path：/api/v1/ticker/region/{btc|usc}</p>
+                    <p class="api_p3">Request类型：GET</p>
+                    <p style="font-weight: bold;" class="api_p3">参数</p>
+                    <p class="api_p4">coin - eth</p>
+                    <p class="api_p4">region - 交易区：可选，btc、usc, 默认btc</p>
+                    <p style="font-weight: bold;" class="api_p3">返回JSON dictionary</p>
+                    <p class="api_p4">high - 最高价</p>
+                    <p class="api_p4">low - 最低价</p>
+                    <p class="api_p4">buy - 买一价</p>
+                    <p class="api_p4">sell - 卖一价</p>
+                    <p class="api_p4">last - 最近一次成交价</p>
+                    <p class="api_p4">vol - 成交量</p>
+                    <p style="font-weight: bold;" class="api_p3">返回结果示例</p>
+                    <pre style="margin-left: 80px;" class="api_p4">{
+    "code" : 0,
+    "msg" : "Suceess",
+    "result": true,
+    "data":[
+        "high":22,
+        "low":20,
+        "buy":1.879,
+        "sell":0,
+        "last":38800,
+        "vol":283.954
+    ]
+}
+</pre>
+                </div>
+                <div>
+                    <span class="dw" id="three-two"></span>
+                    <p class="api_p2"><b>Depth（市场深度）</b></p>
+                    <p class="api_p3">描述：返回所有的市场深度，此回应的数据量会较大，所以请勿频繁调用。</p>
+                    <p class="api_p3">Path：/api/v1/depth/region/{btc|usc}</p>
+                    <p class="api_p3">Request类型：GET</p>
+                    <p style="font-weight: bold;" class="api_p3">参数</p>
+                    <p class="api_p4">region - 交易区：可选，btc、usc, 默认btc</p>
+                    <p class="api_p4">coin - coin</p>
+                    <p style="font-weight: bold;" class="api_p3">返回JSON dictionary</p>
+                    <p class="api_p4">asks - 委买单[价格, 委单量]，价格从高到低排序</p>
+                    <p class="api_p4">bids - 委卖单[价格, 委单量]，价格从高到低排序</p>
+                    <p style="font-weight: bold;" class="api_p3">返回结果示例：</p>
+                    <pre style="margin-left: 80px;" class="api_p4">{
+    "code" : 0,
+    "msg" : "Suceess",
+    "result": true,
+    "asks": [
+        [70000, 5],
+        [69000, 0.48],
+        [67000, 0.9999],
+        [64498, 0.02]
+        ...
+    ],
+    "bids": [
+        [38300, 1.879],
+        [38100, 1.0078],
+        [38000, 1.24],
+        [37700, 4.706]
+        ...
+    ]
+}
+
+</pre>
+
+                </div>
+                <div>
+                    <span class="dw" id="three-four"></span>
+                    <p class="api_p2"><b>只读权限方法列表</b></p>
+                    <p class="api_p2"><b>Account Balance（账户信息）</b></p>
+                    <p class="api_p2">列举您的帐户信息</p>
+                    <p class="api_p3">Path：/api/v1/balance/</p>
+                    <p class="api_p3">Request类型：POST</p>
+                    <p style="font-weight: bold;" class="api_p3">参数</p>
+                    <p class="api_p4">key - API key</p>
+                    <p class="api_p4">signature - signature</p>
+                    <p class="api_p4">nonce - nonce</p>
+                    <p style="font-weight: bold;" class="api_p3">返回JSON dictionary</p>
+                    <p class="api_p4">eth_balance - ETH总余额</p>
+                    <p class="api_p4">btc_balance - 比特币总余额</p>
+                    <p class="api_p4">eth_lock - ETH冻结余额</p>
+                    <p class="api_p4">btc_lock - 比特币冻结余额</p>
+                    <p style="font-weight: bold;" class="api_p3">返回结果示例：</p>
+                    <pre style="margin-left: 80px;" class="api_p4">{
+    "code" : 0,
+    "msg" : "Suceess",
+    "result": true,
+    "data": {
+        "uid": "1",
+        "xas_balance": 1,
+        "xas_lock": 0,
+        "eth_balance": 1,
+        "eth_lock": 0,
+        "btc_balance": 1,
+        "btc_lock": 0
+    }
+}
+</pre>
+                </div>
+                <div>
+                    <span class="dw" id="three-six"></span>
+                    <p class="api_p2"><b>Trust_list（挂单查询）</b></p>
+                    <p class="api_p2">您指定时间后的挂单，可以根据类型查询，比如查看正在挂单和全部挂单</p>
+                    <p class="api_p3">Path：/api/v1/trust_list/region/{btc|usc}</p>
+                    <p class="api_p3">Request类型：POST</p>
+                    <p style="font-weight: bold;" class="api_p3">参数</p>
+                    <p class="api_p4">key - API key</p>
+                    <p class="api_p4">signature - signature</p>
+                    <p class="api_p4">nonce - nonce</p>
+                    <p class="api_p4">since - unix timestamp(utc timezone) default == 0, i.e. 返回所有</p>
+                    <p class="api_p4">coin - coin</p>
+                    <p class="api_p4">region - 交易区：可选，btc、usc, 默认btc</p>
+                    <p class="api_p4">type - 挂单类型[open:正在挂单, all:所有挂单]</p>
+                    <p style="font-weight: bold;" class="api_p3">返回JSON dictionary</p>
+                    <p class="api_p4">id - 挂单ID</p>
+                    <p class="api_p4">coin - eth</p>
+                    <p class="api_p4">datetime - 时间戳</p>
+                    <p class="api_p4">type - "buy" or "sell"</p>
+                    <p class="api_p4">price - price</p>
+                    <p class="api_p4">status - 状态：1 （ 新挂单 ） 2 （ 开放交易 ）, 3  （ 撤销 ）, 4  （ 完全成交 ）</p>
+                    <p class="api_p4">amount_total - 委托数量</p>
+                    <p class="api_p4">amount_remain - 未成交数量</p>
+                    <p style="font-weight: bold;" class="api_p3">返回结果示例：</p>
+                    <pre style="margin-left: 80px;" class="api_p4">{
+    "code" : 0,
+    "msg" : "Suceess"
+    "data": [{
+        "id": "28",
+        "datetime": "1508737051",
+        "type": "sell",
+        "price": 0.000123,
+        "amount_total": 1213,
+        "amount_remain": 1213
+    }]
+}
+</pre>
+                </div>
+                <div>
+                    <span class="dw" id="three-seven"></span>
+                    <p class="api_p2"><b>Trust_view（查询订单信息）</b></p>
+                    <p class="api_p3">Path：/api/v1/trust_view/region/{btc|usc}</p>
+                    <p class="api_p3">Request类型：POST</p>
+                    <p style="font-weight: bold;" class="api_p3">参数</p>
+                    <p class="api_p4">key - API key</p>
+                    <p class="api_p4">signature - signature</p>
+                    <p class="api_p4">nonce - nonce</p>
+                    <p class="api_p4">id - 挂单ID</p>
+                    <p class="api_p4">coin - coin</p>
+                    <p class="api_p4">region - 交易区：可选，btc、usc, 默认btc</p>
+                    <p style="font-weight: bold;" class="api_p3">返回JSON dictionary</p>
+                    <p class="api_p4">id - 挂单ID</p>
+                    <p class="api_p4">datetime - 挂单时间（格式：时间戳）</p>
+                    <p class="api_p4">type - "buy" or "sell"</p>
+                    <p class="api_p4">price - 挂单价</p>
+                    <p class="api_p4">num_total - 委托数量</p>
+                    <p class="api_p4">num_over - 未成交数量</p>
+                    <p class="api_p4">status - 状态：1 （ 新挂单 ） 2 （ 开放交易 ）, 3  （ 撤销 ）, 4  （ 完全成交 ）</p>
+                    <p style="font-weight: bold;" class="api_p3">返回结果示例：</p>
+                    <pre style="margin-left: 80px;" class="api_p4">{
+    "code": 0,
+    "msg": "Suceess",
+    "data": {
+        "id": 28,
+        "datetime": "1508737051",
+        "type": "sell",
+        "price": 0.000123,
+        "num_total": 1213,
+        "num_over": 1213,
+        "status": "4"
+    }
+}
+</pre>
+                </div>
+                <p style="font-weight: bold;" class="gonggao-con-t">完整权限方法列表</p>
+                <div>
+                    <span class="dw" id="three-eight"></span>
+                    <p class="api_p2"><b>Trust_cancel（取消订单）</b></p>
+                    <p class="api_p3">Path：/api/v1/trust_cancel/region/{btc|usc}</p>
+                    <p class="api_p3">Request类型：POST</p>
+                    <p style="font-weight: bold;" class="api_p3">参数</p>
+                    <p class="api_p4">key - API key</p>
+                    <p class="api_p4">signature - signature</p>
+                    <p class="api_p4">nonce - nonce</p>
+                    <p class="api_p4">id - 挂单ID</p>
+                    <p class="api_p4">coin - coin</p>
+                    <p class="api_p4">region - 交易区：可选，btc、usc, 默认btc</p>
+                    <p style="font-weight: bold;" class="api_p3">返回JSON dictionary</p>
+                    <p class="api_p4">code - 0(成功), 其他(失败)</p>
+                    <p class="api_p4">id - 订单ID</p>
+                    <p style="font-weight: bold;" class="api_p3">返回结果示例：</p>
+                    <pre style="margin-left: 80px;" class="api_p4">{
+    "code": 0,
+    "msg": "Suceess",
+    "result": true,
+    "data": {
+        "id": 28
+    }
+}
+</pre>
+                </div>
+                <div>
+                    <span class="dw" id="three-nine"></span>
+                    <p class="api_p2"><b>Trust_add（下单）</b></p>
+                    <p class="api_p3">Path：/api/v1/trust_add/region/{btc|usc}</p>
+                    <p class="api_p3">Request类型：POST</p>
+                    <p style="font-weight: bold;" class="api_p3">参数</p>
+                    <p class="api_p4">key - API key</p>
+                    <p class="api_p4">signature - signature</p>
+                    <p class="api_p4">nonce - nonce</p>
+                    <p class="api_p4">amount - 购买数量</p>
+                    <p class="api_p4">price - 购买价格</p>
+                    <p class="api_p4">type - 买单或者卖单</p>
+                    <p class="api_p4">coin - coin</p>
+                    <p class="api_p4">region - 交易区：可选，btc、usc, 默认btc</p>
+                    <p style="font-weight: bold;" class="api_p3">返回JSON dictionary</p>
+                    <p class="api_p4">id - 挂单ID</p>
+                    <p class="api_p4">code - 0(成功), 其他(失败)</p>
+                    <p style="font-weight: bold;" class="api_p3">返回结果示例：</p>
+                    <pre style="margin-left: 80px;" class="api_p4">{
+    "code": 0,
+    "msg": "Suceess",
+    "result": true,
+    "data": {
+        "id": 28
+    }
+}
+</pre>
+                </div>
+                <p class="gonggao-con-t"><span class="dw" id="parttwo"></span><b>DEMO</b></p>
+                <p class="api_p3 api_btn"><a href="/demo/apidemo.php.zip" class="blue">PHP</a></p>
+                <p style="margin-left: 15px;" class="api_p3 api_btn"><a href="/demo/apidemo.py.zip" class="blue">PYTHON</a></p>
+                <p class="gonggao-con-t"><span class="dw" id="four"></span><b>错误代码对照表</b></p>
+                <table cellpadding="0" cellspacing="0" border="0">
+                    <tbody><tr>
+                        <th width="120">错误代码</th>
+                        <th width="390">详细描述</th>
+                    </tr>
+                    <tr>
+                        <td>10000</td>
+                        <td>必选参数不能为空</td>
+                    </tr>
+                    <tr>
+                        <td>10001</td>
+                        <td>参数错误</td>
+                    </tr>
+                    <tr>
+                        <td>10002</td>
+                        <td>委托不存在</td>
+                    </tr>
+                    <tr>
+                        <td>10003</td>
+                        <td>币种不存在</td>
+                    </tr>
+                    <tr>
+                        <td>10004</td>
+                        <td>币种下架</td>
+                    </tr>
+                    <tr>
+                        <td>10005</td>
+                        <td>KEY错误</td>
+                    </tr>
+                    <tr>
+                        <td>10006</td>
+                        <td>签名错误</td>
+                    </tr>
+                    <tr>
+                        <td>10007</td>
+                        <td>权限不足</td>
+                    </tr>
+                    <tr>
+                        <td>10008</td>
+                        <td>Nonce过期</td>
+                    </tr>
+                    <tr>
+                        <td>10009</td>
+                        <td>价格精度错误</td>
+                    </tr>
+                    <tr>
+                        <td>10010</td>
+                        <td>价格错误</td>
+                    </tr>
+                    <tr>
+                        <td>10011</td>
+                        <td>数量错误</td>
+                    </tr>
+                    <tr>
+                        <td>10012</td>
+                        <td>数量精度错误</td>
+                    </tr>
+                    <tr>
+                        <td>10014</td>
+                        <td>委托正在处理</td>
+                    </tr>
+                    <tr>
+                        <td>10015</td>
+                        <td>撤销委托失败</td>
+                    </tr>
+                    <tr>
+                        <td>20000</td>
+                        <td>用户不存在</td>
+                    </tr>
+                    <tr>
+                        <td>5000x</td>
+                        <td>系统错误</td>
+                    </tr>
+                    <tr>
+                        <td>50005</td>
+                        <td>余额不足</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<footer>
+    <ul class="foot2">
+        <li>
+            <a href="/">
+                <img src="static/images/logo.png" height="16" class="foot_logo">
+            </a>
+            <p>安全可靠的区块链资产交易平台</p>
+        </li>
+        <li>
+            <span>公司介绍</span>
+            <a href="javascript:void(0)">关于我们</a>
+        </li>
+        <li>
+            <span>用户协议</span>
+            <a href="javascript:void(0)">使用条款</a>
+            <a href="javascript:void(0)">隐私政策</a>
+        </li>
+        <li>
+            <span>帮助中心</span>
+            <a href="./">API说明</a>
+            <a href="javascript:void(0)">虚拟币转入/转出</a>
+            <a href="javascript:void(0)">费率说明</a>
+            <a href="javascript:void(0)">常见问题</a>
+        </li>
+        <li style="width: 18%;margin-left: 2%;">
+            <span>联系我们</span>
+            <p style="display: none;">媒体合作：businessbaobi@gmail.com</p>
+            <p>商务：businessbaobi@gmail.com</p>
+            <p>客服：support@baobi.com</p>
+            <div class="share">
+                <a href="javascript:void(0);" class="twitter" target="_blank"></a>
+                <a href="javascript:void(0);" class="facebook" target="_blank"></a>
+                <a href="javascript:void(0);" class="telegramm" target="_blank"></a>
+                <a href="javascript:void(0);" class="weibo" target="_blank"></a>
+                <a class="gzh">
+<!--                    <img src="static/images/logo.png">-->
+                </a>
+            </div>
+        </li>
+        <div class="clear"></div>
+    </ul>
+
+    <p class="copy">Baobi.com</p>
+    <script type="text/javascript">
+        $('.foot-con4_all').hover(function(){$('.foot-connectus').show()},function(){$('.foot-connectus').hide()});
+        $('.lang,.lanague').hover(
+            function(){$('.lang').addClass('selected');$('.lanague').addClass('selected');$('.header').css('z-index',-120);},
+            function(){$('.header').css('z-index',19);$('.lanague').removeClass('selected');$('.lang').removeClass('selected');}
+        );
+        $('.total-con').hover(function(){$('.total-con-list').show()},function(){$('.total-con-list').hide()});
+        $('.jy-email,#userinfo').hover(
+            function(){$('.jy-email').addClass('selected');$('#userinfo').addClass('selected').css('z-index',100);$('.header').css('z-index',-100);$('.hdslide').css('z-index',-100);$('.page').css('z-index',-100);},
+            function(){$('.header').css('z-index',19);$('.email').removeClass('selected');$('#userinfo').removeClass('selected');$('.hdslide').css('z-index',0);$('.page').css('z-index','auto');}
+        );
+    </script>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

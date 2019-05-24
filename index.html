@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="static/css/main.css?v=1537157365" type="text/css">
     <script type="text/javascript" src="static/js/jquery/jquery.1.11.0.min.js"></script>
     <script>
-        var USD_btc = 1,USD_eth = 1,USD_usc = 1,CNY_btc = 1,CNY_eth = 1,CNY_usc = 1,pricePage = 1;
+        var USD_btc = 1,USD_eth = 1,USD_usdt = 1,CNY_btc = 1,CNY_eth = 1,CNY_usdt = 1,pricePage = 1;
         var coinorder = {"data":{"btc":{"eth":{"coin":"eth","is_new":0,"lang":{"zh_CN":"\u4ee5\u592a\u574a","en_US":"Ethereum"}},"ltc":{"coin":"ltc","is_new":0,"lang":{"zh_CN":"\u83b1\u7279\u5e01","en_US":"Litcoin"}},"eos":{"coin":"eos","is_new":0,"lang":{"zh_CN":"EOS","en_US":"EOS"}},"doge":{"coin":"doge","is_new":0,"lang":{"zh_CN":"\u72d7\u72d7\u5e01","en_US":"Dogecoin"}},"xrp":{"coin":"xrp","is_new":0,"lang":{"zh_CN":"\u745e\u6ce2\u5e01","en_US":"Ripple"}},"etc":{"coin":"etc","is_new":0,"lang":{"zh_CN":"\u4ee5\u592a\u7ecf\u5178","en_US":"Ethereum Classic"}},"bch":{"coin":"bch","is_new":0,"lang":{"zh_CN":"\u6bd4\u7279\u73b0\u91d1","en_US":"Bitcoin Cash"}},"bsv":{"coin":"bsv","is_new":0,"lang":{"zh_CN":"Bitcoin SV","en_US":"Bitcoin SV"}},"act":{"coin":"act","is_new":0,"lang":{"zh_CN":"Achain","en_US":"Achain"}},"bcd":{"coin":"bcd","is_new":0,"lang":{"zh_CN":"\u6bd4\u7279\u94bb\u77f3","en_US":"Bitcoin Diamond"}},"safe":{"coin":"safe","is_new":0,"lang":{"zh_CN":"\u5b89\u7f513","en_US":"SAFE"}},"hlc":{"coin":"hlc","is_new":0,"lang":{"zh_CN":"Halal Chain","en_US":"Halal Chain"}},"aidoc":{"coin":"aidoc","is_new":0,"lang":{"zh_CN":"\u5929\u533b","en_US":"AI Doctor"}},"abt":{"coin":"abt","is_new":0,"lang":{"zh_CN":"ArcBlock","en_US":"ArcBlock"}},"ybct":{"coin":"ybct","is_new":0,"lang":{"zh_CN":"\u5143\u5b9d\u5e01","en_US":"YBcoin"}},"lbtc":{"coin":"lbtc","is_new":0,"lang":{"zh_CN":"\u95ea\u7535\u6bd4\u7279\u5e01","en_US":"Lightning Bitcoin"}},"lxt":{"coin":"lxt","is_new":1,"lang":{"zh_CN":"LITEX","en_US":"LITEX"}},"btf":{"coin":"btf","is_new":0,"lang":{"zh_CN":"\u6bd4\u7279\u4fe1\u4ef0","en_US":"Bitcoin Faith"}},"qbtc":{"coin":"qbtc","is_new":0,"lang":{"zh_CN":"\u91cf\u5b50\u6bd4\u7279\u5e01","en_US":"Quantum Bitcoin"}},"ubtc":{"coin":"ubtc","is_new":0,"lang":{"zh_CN":"\u6bd4\u7279\u8054\u50a8","en_US":"United Bitcoin"}},"fbtc":{"coin":"fbtc","is_new":0,"lang":{"zh_CN":"\u5feb\u901f\u6bd4\u7279\u5e01","en_US":"Fast Bitcoin"}},"sbtc":{"coin":"sbtc","is_new":0,"lang":{"zh_CN":"\u8d85\u7ea7\u6bd4\u7279\u5e01","en_US":"Super Bitcoin"}},"btp":{"coin":"btp","is_new":0,"lang":{"zh_CN":"\u6bd4\u7279\u652f\u4ed8","en_US":"Bitcoin Pay"}},"bcx":{"coin":"bcx","is_new":0,"lang":{"zh_CN":"\u6bd4\u7279\u65e0\u9650","en_US":"Bitcoin X"}},"etf":{"coin":"etf","is_new":0,"lang":{"zh_CN":"\u4ee5\u592a\u96fe","en_US":"Ethereum Fog"}},"bt1":{"coin":"bt1","is_new":0,"lang":{"zh_CN":"BT1","en_US":"BT1"}},"bt2":{"coin":"bt2","is_new":0,"lang":{"zh_CN":"BT2","en_US":"BT2"}},"btw":{"coin":"btw","is_new":0,"lang":{"zh_CN":"\u6bd4\u7279\u4e16\u754c","en_US":"Bitcoin World"}}},"eth":{"eos":{"coin":"eos","is_new":0,"lang":{"zh_CN":"EOS","en_US":"EOS"}},"xrp":{"coin":"xrp","is_new":0,"lang":{"zh_CN":"\u745e\u6ce2\u5e01","en_US":"Ripple"}},"etc":{"coin":"etc","is_new":0,"lang":{"zh_CN":"\u4ee5\u592a\u7ecf\u5178","en_US":"Ethereum Classic"}},"ltc":{"coin":"ltc","is_new":0,"lang":{"zh_CN":"\u83b1\u7279\u5e01","en_US":"Litcoin"}},"iotx":{"coin":"iotx","is_new":1,"lang":{"zh_CN":"IoTeX","en_US":"IoTeX"}},"hlc":{"coin":"hlc","is_new":0,"lang":{"zh_CN":"Halal Chain","en_US":"Halal Chain"}},"ade":{"coin":"ade","is_new":1,"lang":{"zh_CN":"DMCHAIN","en_US":"DMCHAIN"}},"ela":{"coin":"ela","is_new":1,"lang":{"zh_CN":"\u4ea6\u6765\u4e91","en_US":"ela"}},"lxt":{"coin":"lxt","is_new":1,"lang":{"zh_CN":"LITEX","en_US":"LITEX"}}},"usdt":{"btc":{"coin":"btc","is_new":0,"lang":{"zh_CN":"\u6bd4\u7279\u5e01","en_US":"Bitcoin"}},"eth":{"coin":"eth","is_new":0,"lang":{"zh_CN":"\u4ee5\u592a\u574a","en_US":"Ethereum"}},"eos":{"coin":"eos","is_new":0,"lang":{"zh_CN":"EOS","en_US":"EOS"}},"ltc":{"coin":"ltc","is_new":0,"lang":{"zh_CN":"\u83b1\u7279\u5e01","en_US":"Litcoin"}},"doge":{"coin":"doge","is_new":0,"lang":{"zh_CN":"\u72d7\u72d7\u5e01","en_US":"Dogecoin"}}},"busd":{"usdt":{"coin":"usdt","is_new":0,"lang":{"zh_CN":"USDT","en_US":"USDT"}},"btc":{"coin":"btc","is_new":0,"lang":{"zh_CN":"\u6bd4\u7279\u5e01","en_US":"Bitcoin"}}}}};
         var COIN = {};
         for(var i in coinorder.data.btc){
@@ -19,7 +19,7 @@
             COIN[coinorder.data.btc[i].coin]['coin'] = coinorder.data.btc[i].coin;
         }
         COIN['btc'] = {"zh_CN":"比特币","en_US":"Bitcoin","coin":"btc"}
-        COIN['usc'] = {"zh_CN":"usc","en_US":"usc","coin":"usc"}
+        COIN['usdt'] = {"zh_CN":"usdt","en_US":"usdt","coin":"usdt"}
     </script>
     <script type="text/javascript" src="static/js/lang/zh_CN/lang.js?v=1537157365"></script>
     <script type="text/javascript" src="static/js/coinuni.js?v=1537157365"></script>
@@ -96,11 +96,11 @@
                 <div>
                     <span class="dw" id="three-one"></span>
                     <p class="api_p2"><b>Ticker（牌价）</b></p>
-                    <p class="api_p3">Path：/api/v1/ticker/region/{btc|usc}</p>
+                    <p class="api_p3">Path：/api/v1/ticker/region/{btc|usdt}</p>
                     <p class="api_p3">Request类型：POST</p>
                     <p style="font-weight: bold;" class="api_p3">参数</p>
                     <p class="api_p4">coin - eth</p>
-                    <p class="api_p4">region - 交易区：可选，btc、usc, 默认btc</p>
+                    <p class="api_p4">region - 交易区：可选，btc、usdt, 默认btc</p>
                     <p style="font-weight: bold;" class="api_p3">返回JSON dictionary</p>
                     <p class="api_p4">high - 最高价</p>
                     <p class="api_p4">low - 最低价</p>
@@ -128,10 +128,10 @@
                     <span class="dw" id="three-two"></span>
                     <p class="api_p2"><b>Depth（市场深度）</b></p>
                     <p class="api_p3">描述：返回所有的市场深度，此回应的数据量会较大，所以请勿频繁调用。</p>
-                    <p class="api_p3">Path：/api/v1/depth/region/{btc|usc}</p>
+                    <p class="api_p3">Path：/api/v1/depth/region/{btc|usdt}</p>
                     <p class="api_p3">Request类型：POST</p>
                     <p style="font-weight: bold;" class="api_p3">参数</p>
-                    <p class="api_p4">region - 交易区：可选，btc、usc, 默认btc</p>
+                    <p class="api_p4">region - 交易区：可选，btc、usdt, 默认btc</p>
                     <p class="api_p4">coin - coin</p>
                     <p style="font-weight: bold;" class="api_p3">返回JSON dictionary</p>
                     <p class="api_p4">asks - 委买单[价格, 委单量]，价格从高到低排序</p>
@@ -197,7 +197,7 @@
                     <span class="dw" id="three-six"></span>
                     <p class="api_p2"><b>Trust_list（挂单查询）</b></p>
                     <p class="api_p2">您指定时间后的挂单，可以根据类型查询，比如查看正在挂单和全部挂单</p>
-                    <p class="api_p3">Path：/api/v1/trust_list/region/{btc|usc}</p>
+                    <p class="api_p3">Path：/api/v1/trust_list/region/{btc|usdt}</p>
                     <p class="api_p3">Request类型：POST</p>
                     <p style="font-weight: bold;" class="api_p3">参数</p>
                     <p class="api_p4">key - API key</p>
@@ -205,7 +205,7 @@
                     <p class="api_p4">nonce - nonce</p>
                     <p class="api_p4">since - unix timestamp(utc timezone) default == 0, i.e. 返回所有</p>
                     <p class="api_p4">coin - coin</p>
-                    <p class="api_p4">region - 交易区：可选，btc、usc, 默认btc</p>
+                    <p class="api_p4">region - 交易区：可选，btc、usdt, 默认btc</p>
                     <p class="api_p4">type - 挂单类型[open:正在挂单, all:所有挂单]</p>
                     <p style="font-weight: bold;" class="api_p3">返回JSON dictionary</p>
                     <p class="api_p4">id - 挂单ID</p>
@@ -234,7 +234,7 @@
                 <div>
                     <span class="dw" id="three-seven"></span>
                     <p class="api_p2"><b>Trust_view（查询订单信息）</b></p>
-                    <p class="api_p3">Path：/api/v1/trust_view/region/{btc|usc}</p>
+                    <p class="api_p3">Path：/api/v1/trust_view/region/{btc|usdt}</p>
                     <p class="api_p3">Request类型：POST</p>
                     <p style="font-weight: bold;" class="api_p3">参数</p>
                     <p class="api_p4">key - API key</p>
@@ -242,7 +242,7 @@
                     <p class="api_p4">nonce - nonce</p>
                     <p class="api_p4">id - 挂单ID</p>
                     <p class="api_p4">coin - coin</p>
-                    <p class="api_p4">region - 交易区：可选，btc、usc, 默认btc</p>
+                    <p class="api_p4">region - 交易区：可选，btc、usdt, 默认btc</p>
                     <p style="font-weight: bold;" class="api_p3">返回JSON dictionary</p>
                     <p class="api_p4">id - 挂单ID</p>
                     <p class="api_p4">datetime - 挂单时间（格式：时间戳）</p>
@@ -271,7 +271,7 @@
                 <div>
                     <span class="dw" id="three-eight"></span>
                     <p class="api_p2"><b>Trust_cancel（取消订单）</b></p>
-                    <p class="api_p3">Path：/api/v1/trust_cancel/region/{btc|usc}</p>
+                    <p class="api_p3">Path：/api/v1/trust_cancel/region/{btc|usdt}</p>
                     <p class="api_p3">Request类型：POST</p>
                     <p style="font-weight: bold;" class="api_p3">参数</p>
                     <p class="api_p4">key - API key</p>
@@ -279,7 +279,7 @@
                     <p class="api_p4">nonce - nonce</p>
                     <p class="api_p4">id - 挂单ID</p>
                     <p class="api_p4">coin - coin</p>
-                    <p class="api_p4">region - 交易区：可选，btc、usc, 默认btc</p>
+                    <p class="api_p4">region - 交易区：可选，btc、usdt, 默认btc</p>
                     <p style="font-weight: bold;" class="api_p3">返回JSON dictionary</p>
                     <p class="api_p4">code - 0(成功), 其他(失败)</p>
                     <p class="api_p4">id - 订单ID</p>
@@ -297,7 +297,7 @@
                 <div>
                     <span class="dw" id="three-nine"></span>
                     <p class="api_p2"><b>Trust_add（下单）</b></p>
-                    <p class="api_p3">Path：/api/v1/trust_add/region/{btc|usc}</p>
+                    <p class="api_p3">Path：/api/v1/trust_add/region/{btc|usdt}</p>
                     <p class="api_p3">Request类型：POST</p>
                     <p style="font-weight: bold;" class="api_p3">参数</p>
                     <p class="api_p4">key - API key</p>
@@ -307,7 +307,7 @@
                     <p class="api_p4">price - 购买价格</p>
                     <p class="api_p4">type - 买单或者卖单</p>
                     <p class="api_p4">coin - coin</p>
-                    <p class="api_p4">region - 交易区：可选，btc、usc, 默认btc</p>
+                    <p class="api_p4">region - 交易区：可选，btc、usdt, 默认btc</p>
                     <p style="font-weight: bold;" class="api_p3">返回JSON dictionary</p>
                     <p class="api_p4">id - 挂单ID</p>
                     <p class="api_p4">code - 0(成功), 其他(失败)</p>

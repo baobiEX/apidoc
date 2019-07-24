@@ -57,13 +57,15 @@
             <p class="api_t2"><a href="#one">1、请求过程说明</a></p>
             <p class="api_t2"><a href="#two">2、安全认证</a></p>
             <p class="api_t2"><a href="#three">3、接口</a></p>
-            <p class="api_t3"><a href="#three-one">3.1获取当前最新行情 - Ticker</a></p>
-            <p class="api_t3"><a href="#three-two">3.2市场深度 - Depth</a></p>
-            <p class="api_t3"><a href="#three-four">3.3账户信息 - Balance</a></p>
-            <p class="api_t3"><a href="#three-six">3.4挂单查询 - Trust_list</a></p>
-            <p class="api_t3"><a href="#three-seven">3.5查询订单信息 - Trust_view</a></p>
-            <p class="api_t3"><a href="#three-eight">3.6取消订单 - Trust_cancel</a></p>
-            <p class="api_t3"><a href="#three-nine">3.7下单 - Trust_add</a></p>
+            <p class="api_t3"><a href="#three-one">3.1获取所有交易对 - Pairs</a></p>
+            <p class="api_t3"><a href="#three-two">3.2获取当前最新行情 - Ticker</a></p>
+            <p class="api_t3"><a href="#three-three">3.3获取最新成交单 - Orders</a></p>
+            <p class="api_t3"><a href="#three-four">3.4市场深度 - Depth</a></p>
+            <p class="api_t3"><a href="#three-five">3.5账户信息 - Balance</a></p>
+            <p class="api_t3"><a href="#three-six">3.6挂单查询 - Trust_list</a></p>
+            <p class="api_t3"><a href="#three-seven">3.7查询订单信息 - Trust_view</a></p>
+            <p class="api_t3"><a href="#three-eight">3.8取消订单 - Trust_cancel</a></p>
+            <p class="api_t3"><a href="#three-nine">3.9下单 - Trust_add</a></p>
             <p class="api_t2"><a href="#four">4.错误代码对照表</a></p>
             <p class="api_t1"><a href="#parttwo" class="blue">二、API实例代码</a></p>
             <div class="apijj_con">
@@ -95,6 +97,75 @@
                 <p style="font-weight: bold;" class="api_p1"><span class="dw" id="three"></span>4、接口</p>
                 <div>
                     <span class="dw" id="three-one"></span>
+                    <p class="api_p2"><b>Pairs（交易对）</b></p>
+                    <p class="api_p3">Path：/api/v1/pairs</p>
+                    <p class="api_p3">Request类型：GET</p>
+                    <p style="font-weight: bold;" class="api_p3">返回JSON dictionary</p>
+                    <p class="api_p4">eth_btc - ETH对BTC交易对</p>
+                    <p class="api_p4">eth_usdt - ETH对USDT交易对</p>
+                    <p style="font-weight: bold;" class="api_p3">返回结果示例</p>
+                    <pre style="margin-left: 80px;" class="api_p4">
+    {
+        code: 0,
+        msg: "Suceess",
+        data: [
+            "eth_btc",
+            "ltc_btc",
+            "eos_btc",
+            "doge_btc",
+            "xrp_btc",
+            "etc_btc",
+            "bch_btc",
+            "bsv_btc",
+            "act_btc",
+            "bcd_btc",
+            "safe_btc",
+            "hlc_btc",
+            "aidoc_btc",
+            "abt_btc",
+            "ybct_btc",
+            "lbtc_btc",
+            "lxt_btc",
+            "btf_btc",
+            "qbtc_btc",
+            "ubtc_btc",
+            "fbtc_btc",
+            "sbtc_btc",
+            "btp_btc",
+            "bcx_btc",
+            "etf_btc",
+            "bt1_btc",
+            "bt2_btc",
+            "btw_btc",
+            "eos_eth",
+            "xrp_eth",
+            "etc_eth",
+            "ltc_eth",
+            "iotx_eth",
+            "hlc_eth",
+            "ade_eth",
+            "ela_eth",
+            "lxt_eth",
+            "btc_usdt",
+            "eth_usdt",
+            "xrp_usdt",
+            "ltc_usdt",
+            "eos_usdt",
+            "etc_usdt",
+            "doge_usdt",
+            "grin_usdt",
+            "vds_usdt",
+            "usdt_busd",
+            "btc_busd"
+        ]
+    }
+                    </pre>
+                </div>
+
+
+
+                <div>
+                    <span class="dw" id="three-two"></span>
                     <p class="api_p2"><b>Ticker（牌价）</b></p>
                     <p class="api_p3">Path：/api/v1/ticker/region/{btc|usdt}</p>
                     <p class="api_p3">Request类型：POST</p>
@@ -109,23 +180,64 @@
                     <p class="api_p4">last - 最近一次成交价</p>
                     <p class="api_p4">vol - 成交量</p>
                     <p style="font-weight: bold;" class="api_p3">返回结果示例</p>
-                    <pre style="margin-left: 80px;" class="api_p4">{
-    "code" : 0,
-    "msg" : "Suceess",
-    "result": true,
-    "data":[
-        "high":22,
-        "low":20,
-        "buy":1.879,
-        "sell":0,
-        "last":38800,
-        "vol":283.954
-    ]
-}
+                    <pre style="margin-left: 80px;" class="api_p4">
+    {
+        "code" : 0,
+        "msg" : "Suceess",
+        "result": true,
+        "data":[
+            "high":22,
+            "low":20,
+            "buy":1.879,
+            "sell":0,
+            "last":38800,
+            "vol":283.954
+        ]
+    }
 </pre>
                 </div>
                 <div>
-                    <span class="dw" id="three-two"></span>
+                    <span class="dw" id="three-three"></span>
+                    <p class="api_p2"><b>Orders（最新成交单）</b></p>
+                    <p class="api_p3">Path：/api/v1/orders/region/{btc|usdt}?coin={coin}</p>
+                    <p class="api_p3">Request类型：GET</p>
+                    <p style="font-weight: bold;" class="api_p3">参数</p>
+                    <p class="api_p4">region - 交易区：可选，btc、usdt, 默认btc</p>
+                    <p class="api_p4">coin - 币种</p>
+                    <p class="api_p4">since - 起始tid（如果传入该参数则获取小于该起始tid的100条交易单记录）</p>
+                    <p style="font-weight: bold;" class="api_p3">返回JSON dictionary</p>
+                    <p class="api_p4">date - 交易单时间</p>
+                    <p class="api_p4">price - 成交价</p>
+                    <p class="api_p4">amount - 成交量</p>
+                    <p class="api_p4">tid - 交易单id</p>
+                    <p class="api_p4">type - buy/sell</p>
+                    <p style="font-weight: bold;" class="api_p3">返回结果示例</p>
+                    <pre style="margin-left: 80px;" class="api_p4">
+   {
+    "code": 0,
+    "msg": "Suceess",
+    "data": [
+        {
+            "date": "1563393867",
+            "price": "3.9293000000",
+            "amount": "43367.94500000",
+            "tid": "5364852",
+            "type": "sell"
+        },
+        {
+            "date": "1563393772",
+            "price": "3.9358000000",
+            "amount": "23507.42100000",
+            "tid": "5364851",
+            "type": "buy"
+        },
+        ....
+    ]
+    }
+                    </pre>
+                </div>
+                <div>
+                    <span class="dw" id="three-four"></span>
                     <p class="api_p2"><b>Depth（市场深度）</b></p>
                     <p class="api_p3">描述：返回所有的市场深度，此回应的数据量会较大，所以请勿频繁调用。</p>
                     <p class="api_p3">Path：/api/v1/depth/region/{btc|usdt}</p>
@@ -161,7 +273,7 @@
 
                 </div>
                 <div>
-                    <span class="dw" id="three-four"></span>
+                    <span class="dw" id="three-five"></span>
                     <p class="api_p2"><b>只读权限方法列表</b></p>
                     <p class="api_p2"><b>Account Balance（账户信息）</b></p>
                     <p class="api_p2">列举您的帐户信息</p>

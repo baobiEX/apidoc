@@ -59,13 +59,14 @@
             <p class="api_t2"><a href="#three">3、接口</a></p>
             <p class="api_t3"><a href="#three-one">3.1获取所有交易对 - Pairs</a></p>
             <p class="api_t3"><a href="#three-two">3.2获取当前最新行情 - Ticker</a></p>
-            <p class="api_t3"><a href="#three-three">3.3获取最新成交单 - Orders</a></p>
-            <p class="api_t3"><a href="#three-four">3.4市场深度 - Depth</a></p>
-            <p class="api_t3"><a href="#three-five">3.5账户信息 - Balance</a></p>
-            <p class="api_t3"><a href="#three-six">3.6挂单查询 - Trust_list</a></p>
-            <p class="api_t3"><a href="#three-seven">3.7查询订单信息 - Trust_view</a></p>
-            <p class="api_t3"><a href="#three-eight">3.8取消订单 - Trust_cancel</a></p>
-            <p class="api_t3"><a href="#three-nine">3.9下单 - Trust_add</a></p>
+            <p class="api_t3"><a href="#three-three">3.3获取所有交易对最新行情 - AllTicker</a></p>
+            <p class="api_t3"><a href="#three-four">3.4获取最新成交单 - Orders</a></p>
+            <p class="api_t3"><a href="#three-five">3.5市场深度 - Depth</a></p>
+            <p class="api_t3"><a href="#three-six">3.6账户信息 - Balance</a></p>
+            <p class="api_t3"><a href="#three-seven">3.7挂单查询 - Trust_list</a></p>
+            <p class="api_t3"><a href="#three-eight">3.8查询订单信息 - Trust_view</a></p>
+            <p class="api_t3"><a href="#three-nine">3.9取消订单 - Trust_cancel</a></p>
+            <p class="api_t3"><a href="#three-ten">3.10下单 - Trust_add</a></p>
             <p class="api_t2"><a href="#four">4.错误代码对照表</a></p>
             <p class="api_t1"><a href="#parttwo" class="blue">二、API实例代码</a></p>
             <div class="apijj_con">
@@ -198,6 +199,50 @@
                 </div>
                 <div>
                     <span class="dw" id="three-three"></span>
+                    <p class="api_p2"><b>AllTicker（获取所有交易对最新行情）</b></p>
+                    <p class="api_p3">Path：/api/v1/allticker</p>
+                    <p class="api_p3">Request类型：GET</p>
+                    <p style="font-weight: bold;" class="api_p3">返回JSON dictionary</p>
+                    <p class="api_p4">date - 返回数据时服务器时间</p>
+                    <p class="api_p4">buy - 买一价</p>
+					<p class="api_p4">high - 最高价</p>
+					<p class="api_p4">last - 最新成交价</p> 
+					<p class="api_p4">low - 最低价</p>
+					<p class="api_p4">sell - 卖一价</p>
+					<p class="api_p4">vol - 成交量(最近的24小时)</p>
+					<p class="api_p4">change - 涨跌幅</p>
+                    <p style="font-weight: bold;" class="api_p3">返回结果示例</p>
+                    <pre style="margin-left: 80px;" class="api_p4">
+{
+    "date": "1570774363",
+    "ticker": [
+        {
+            "symbol": "eth_btc",
+            "buy": "0.02802135",
+            "high": "0.02966963",
+            "last": "0.02849654",
+            "low": "0.02802209",
+            "sell": "0.02966968",
+            "vol": "6632.531",
+            "change": "-3.67"
+        },
+        {
+            "symbol": "ltc_btc",
+            "buy": "0.00643300",
+            "high": "0.00710860",
+            "last": "0.00686600",
+            "low": "0.00638110",
+            "sell": "0.00695400",
+            "vol": "46413.5124",
+            "change": "5.39"
+        },
+		...
+    ]
+}
+                    </pre>
+                </div>
+                <div>
+                    <span class="dw" id="three-four"></span>
                     <p class="api_p2"><b>Orders（最新成交单）</b></p>
                     <p class="api_p3">Path：/api/v1/orders/region/{btc|usdt}?coin={coin}</p>
                     <p class="api_p3">Request类型：GET</p>
@@ -237,7 +282,7 @@
                     </pre>
                 </div>
                 <div>
-                    <span class="dw" id="three-four"></span>
+                    <span class="dw" id="three-five"></span>
                     <p class="api_p2"><b>Depth（市场深度）</b></p>
                     <p class="api_p3">描述：返回所有的市场深度，此回应的数据量会较大，所以请勿频繁调用。</p>
                     <p class="api_p3">Path：/api/v1/depth/region/{btc|usdt}</p>
@@ -273,7 +318,7 @@
 
                 </div>
                 <div>
-                    <span class="dw" id="three-five"></span>
+                    <span class="dw" id="three-six"></span>
                     <p class="api_p2"><b>只读权限方法列表</b></p>
                     <p class="api_p2"><b>Account Balance（账户信息）</b></p>
                     <p class="api_p2">列举您的帐户信息</p>
@@ -306,7 +351,7 @@
 </pre>
                 </div>
                 <div>
-                    <span class="dw" id="three-six"></span>
+                    <span class="dw" id="three-seven"></span>
                     <p class="api_p2"><b>Trust_list（挂单查询）</b></p>
                     <p class="api_p2">您指定时间后的挂单，可以根据类型查询，比如查看正在挂单和全部挂单</p>
                     <p class="api_p3">Path：/api/v1/trust_list/region/{btc|usdt}</p>
@@ -344,7 +389,7 @@
 </pre>
                 </div>
                 <div>
-                    <span class="dw" id="three-seven"></span>
+                    <span class="dw" id="three-eight"></span>
                     <p class="api_p2"><b>Trust_view（查询订单信息）</b></p>
                     <p class="api_p3">Path：/api/v1/trust_view/region/{btc|usdt}</p>
                     <p class="api_p3">Request类型：POST</p>
@@ -381,7 +426,7 @@
                 </div>
                 <p style="font-weight: bold;" class="gonggao-con-t">完整权限方法列表</p>
                 <div>
-                    <span class="dw" id="three-eight"></span>
+                    <span class="dw" id="three-nine"></span>
                     <p class="api_p2"><b>Trust_cancel（取消订单）</b></p>
                     <p class="api_p3">Path：/api/v1/trust_cancel/region/{btc|usdt}</p>
                     <p class="api_p3">Request类型：POST</p>
@@ -407,7 +452,7 @@
 </pre>
                 </div>
                 <div>
-                    <span class="dw" id="three-nine"></span>
+                    <span class="dw" id="three-ten"></span>
                     <p class="api_p2"><b>Trust_add（下单）</b></p>
                     <p class="api_p3">Path：/api/v1/trust_add/region/{btc|usdt}</p>
                     <p class="api_p3">Request类型：POST</p>
